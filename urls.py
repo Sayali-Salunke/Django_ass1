@@ -1,8 +1,11 @@
 
 from django.contrib import admin
-from django.urls import path,include
-
+from django.urls import path
+from . import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('college/',include("college.urls"))
+   
+    path('cse',views.cse,name="cse" ),
+    path('etc',views.etc,name="etc" ),
+    path('civil',views.civil,name="civil"),
+    path('mech',views.mech,name="mech" )
 ]
